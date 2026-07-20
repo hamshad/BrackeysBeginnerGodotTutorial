@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b136pmgpveu3f" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cgh737h4jilc1" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://cedknt636uj31" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://ybs0muy45oer" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -313,10 +314,55 @@ position = Vector2(919, 103)
 [node name="Coin20" parent="Coins" unique_id=1070701558 instance=ExtResource("4_lbhrr")]
 position = Vector2(919, 88)
 
-[node name="Slime" type="Node" parent="." unique_id=437740548]
+[node name="Slimes" type="Node" parent="." unique_id=437740548]
 
-[node name="Slime" parent="Slime" unique_id=1821617566 instance=ExtResource("6_p57ef")]
+[node name="Slime" parent="Slimes" unique_id=1821617566 instance=ExtResource("6_p57ef")]
 position = Vector2(936, 116)
 
-[node name="Slime2" parent="Slime" unique_id=1188230143 instance=ExtResource("6_p57ef")]
+[node name="Slime2" parent="Slimes" unique_id=1188230143 instance=ExtResource("6_p57ef")]
 position = Vector2(264, 100)
+
+[node name="Labels" type="Node" parent="." unique_id=2108576080]
+
+[node name="Label" type="Label" parent="Labels" unique_id=814913602]
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 93.0
+offset_bottom = 11.0
+theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump"
+
+[node name="Label2" type="Label" parent="Labels" unique_id=702158884]
+offset_left = 242.0
+offset_top = 73.0
+offset_right = 348.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Avoid this slimer"
+
+[node name="Label3" type="Label" parent="Labels" unique_id=1440293753]
+offset_left = 803.0
+offset_top = 36.0
+offset_right = 909.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Money!!!"
+
+[node name="Label4" type="Label" parent="Labels" unique_id=1746196537]
+offset_left = 1271.0
+offset_top = -28.0
+offset_right = 1498.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "The story ends here
+
+End your fate here
+and reborn"
