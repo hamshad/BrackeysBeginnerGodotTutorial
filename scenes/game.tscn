@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://deb7bjgxfnqpo"]
 
+[ext_resource type="Script" uid="uid://cw1oyd8nbe330" path="res://scripts/game_manager.gd" id="1_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://b7jkb7af1itmr" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://cxvroprp3h8ab" path="res://assets/sprites/world_tileset.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://btrlrbm542sx7" path="res://scenes/platform.tscn" id="3_lnu2h"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cgh737h4jilc1" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://cedknt636uj31" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://ybs0muy45oer" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
+[ext_resource type="FontFile" uid="uid://boxoy40k621n8" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="8_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -217,6 +219,22 @@ _data = {
 
 [node name="Game" type="Node2D" unique_id=1228057458]
 
+[node name="GameManager" type="Node" parent="." unique_id=719640990]
+unique_name_in_owner = true
+script = ExtResource("1_0tnpc")
+
+[node name="ScoreLabel" type="Label" parent="GameManager" unique_id=201676120]
+offset_left = 1257.0
+offset_top = -9.0
+offset_right = 1394.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 8
+text = "You have collected X Coins."
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="TileMap" type="TileMap" parent="." unique_id=701174745]
 tile_set = SubResource("TileSet_s054k")
 format = 2
@@ -355,14 +373,12 @@ theme_override_font_sizes/font_size = 8
 text = "Money!!!"
 
 [node name="Label4" type="Label" parent="Labels" unique_id=1746196537]
-offset_left = 1271.0
-offset_top = -28.0
-offset_right = 1498.0
-offset_bottom = 35.0
+offset_left = 1317.0
+offset_top = 87.0
+offset_right = 1435.0
+offset_bottom = 109.0
 theme_override_colors/font_color = Color(0.011764706, 0.14901961, 0.34901962, 1)
 theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
-text = "The story ends here
-
-End your fate here
+text = "End your fate here
 and reborn"
