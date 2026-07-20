@@ -2,7 +2,10 @@ extends Area2D
 
 @onready var game_manager: Node = %GameManager
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 # This is Signal function, i can see it in Signals section on the right bars besides Inspector.
 func _on_body_entered(body: Node2D) -> void:
 	game_manager.add_point()
-	queue_free() # This removes the coin from the screen
+	# queue_free() # This removes the coin from the screen
+	animation_player.play("pickup")
