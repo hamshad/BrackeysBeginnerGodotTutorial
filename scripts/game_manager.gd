@@ -4,7 +4,8 @@ extends Node
 # So, we attribute it as Unique so when referencing it from nested scene
 # we can easily import (Its the best practice)
 
-var score: int = 0
+# := is same as : int = 0
+var score := 0
 
 @onready var score_label: Label = $ScoreLabel
 
